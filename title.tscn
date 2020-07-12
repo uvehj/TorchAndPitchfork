@@ -161,4 +161,5 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="startgame/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="exit/TextureButton" to="." method="_on_Exit_Button"]
