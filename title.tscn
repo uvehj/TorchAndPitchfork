@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://background_4.jpg" type="Texture" id=1]
+[ext_resource path="res://GMTK_GJ_logo.png" type="Texture" id=2]
+[ext_resource path="res://semitransparent.png" type="Texture" id=3]
+[ext_resource path="res://title.png" type="Texture" id=4]
+[ext_resource path="res://background_3.jpg" type="Texture" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 644.293, 368.168 )
+scale = Vector2( 1.47393, 1.11973 )
+texture = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 1019.2
+margin_top = 615.109
+margin_right = 1283.2
+margin_bottom = 731.109
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1153.89, 664.497 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 344.771
+margin_top = 212.986
+margin_right = 866.771
+margin_bottom = 310.986
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect2"]
+margin_left = -1.0
+margin_top = -2.0
+margin_right = 520.0
+margin_bottom = 101.0
+size_flags_horizontal = 2
+texture_pressed = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

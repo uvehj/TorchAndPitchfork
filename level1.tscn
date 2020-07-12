@@ -1,15 +1,31 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
+[ext_resource path="res://background_3.jpg" type="Texture" id=1]
 [ext_resource path="res://mob.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -35.9797
+margin_top = -39.5305
+margin_right = 1300.02
+margin_bottom = 860.47
+texture = ExtResource( 1 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 282.643, 198.379 )
-faction = "rebels"
+position = Vector2( 393.78, 176.098 )
+faction = "church"
 size = 50
 
 [node name="Node2D2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 468, 194 )
-faction = "monarch"
-size = 100
+position = Vector2( 687.405, 309.465 )
+faction = "rebels"
+size = 20
+
+[node name="Node2D3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 468.486, 454.376 )
+size = 50
