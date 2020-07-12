@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://background_3.jpg" type="Texture" id=1]
 [ext_resource path="res://mob.tscn" type="PackedScene" id=2]
+[ext_resource path="res://level1.gd" type="Script" id=3]
+[ext_resource path="res://sprites/house.png" type="Texture" id=4]
+[ext_resource path="res://background_2.jpg" type="Texture" id=5]
+[ext_resource path="res://semitransparent.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -35.9797
@@ -17,15 +22,49 @@ __meta__ = {
 }
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 393.78, 176.098 )
+position = Vector2( 272.618, 122.644 )
 faction = "church"
-size = 50
-
-[node name="Node2D2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 687.405, 309.465 )
-faction = "rebels"
 size = 20
 
+[node name="Node2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 990.311, 355.792 )
+faction = "rebels"
+size = 30
+
 [node name="Node2D3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 468.486, 454.376 )
-size = 50
+position = Vector2( 906.808, 522.084 )
+faction = "church"
+size = 20
+
+[node name="Node2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 149.671, 195.998 )
+faction = "monarch"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_top = 650.0
+margin_right = 70.0
+margin_bottom = 720.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect2"]
+position = Vector2( 33.7272, 35.99 )
+scale = Vector2( 0.391813, 0.329787 )
+texture = ExtResource( 4 )
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect2/Sprite"]
+margin_left = -83.0
+margin_top = -108.0
+margin_right = 92.0
+margin_bottom = 103.0
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="TextureRect2/Sprite/TextureButton" to="." method="_on_home_pressed"]

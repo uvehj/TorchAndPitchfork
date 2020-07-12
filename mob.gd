@@ -5,9 +5,10 @@ export var faction = "neutral"
 export var size = 10
 var combat_speed = 10
 var objective = Vector2(0,0)
+var objective_mob = self
 var action = "stay"
 var mandated_action = "stay"
-var movement_speed = 20
+var movement_speed = 40
 var rng = RandomNumberGenerator.new()
 
 const max_x = 1280
@@ -89,6 +90,8 @@ func act():
 		self.monarch_actions()
 	if faction == "neutral":
 		self.neutral_actions()
+	if faction == "rebels":
+		self.rebel_actions()
 
 func church_actions():
 	action = "stay"
@@ -138,3 +141,9 @@ func neutral_actions():
 	action = "move"
 	if objective.distance_to(self.global_position) < movement_speed or objective.distance_to(Vector2(0,0)) == 0:
 		objective = Vector2(rng.randi_range(min_x,max_x),rng.randi_range(min_y,max_y))
+func rebel_actions():
+	if objective_mob.size > 0:
+		objective = objective_mob.global_position
+	else:
+		action = "stay"
+		objective = self.global_position
