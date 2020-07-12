@@ -12,7 +12,7 @@ var rng = RandomNumberGenerator.new()
 
 const max_x = 1280
 const max_y = 720
-const min_x = 0
+const min_x = 100
 const min_y = 0
 
 # Called when the node enters the scene tree for the first time.

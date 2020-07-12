@@ -1,17 +1,75 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://background_4.jpg" type="Texture" id=1]
 [ext_resource path="res://GMTK_GJ_logo.png" type="Texture" id=2]
 [ext_resource path="res://semitransparent.png" type="Texture" id=3]
 [ext_resource path="res://title.png" type="Texture" id=4]
-[ext_resource path="res://background_3.jpg" type="Texture" id=5]
+[ext_resource path="res://exit.PNG" type="Texture" id=5]
+[ext_resource path="res://howtoplay.PNG" type="Texture" id=6]
+[ext_resource path="res://startgame.PNG" type="Texture" id=7]
+[ext_resource path="res://sprites/shout.png" type="Texture" id=8]
+[ext_resource path="res://sprites/king.png" type="Texture" id=9]
+[ext_resource path="res://sprites/mob.png" type="Texture" id=10]
+[ext_resource path="res://sprites/fire.png" type="Texture" id=11]
+[ext_resource path="res://sprites/church.png" type="Texture" id=12]
+[ext_resource path="res://sprites/axe.png" type="Texture" id=13]
+[ext_resource path="res://sprites/pair.png" type="Texture" id=14]
+[ext_resource path="res://sprites/peasant.png" type="Texture" id=15]
+[ext_resource path="res://sprites/soldiers.png" type="Texture" id=16]
+[ext_resource path="res://sprites/horses.png" type="Texture" id=17]
+[ext_resource path="res://title.gd" type="Script" id=18]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 18 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 644.293, 368.168 )
+position = Vector2( 633.602, 368.168 )
 scale = Vector2( 1.47393, 1.11973 )
 texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 685.757, 441.297 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Sprite3"]
+position = Vector2( 726.122, -34.0157 )
+texture = ExtResource( 9 )
+
+[node name="Sprite2" type="Sprite" parent="Sprite3"]
+position = Vector2( 86.1731, 104.315 )
+texture = ExtResource( 10 )
+flip_h = true
+
+[node name="Sprite3" type="Sprite" parent="Sprite3"]
+position = Vector2( 340.157, -303.874 )
+texture = ExtResource( 12 )
+
+[node name="Sprite5" type="Sprite" parent="Sprite3"]
+position = Vector2( -13.6063, 145.134 )
+texture = ExtResource( 13 )
+
+[node name="Sprite4" type="Sprite" parent="Sprite3"]
+position = Vector2( 90.7087, 204.094 )
+texture = ExtResource( 11 )
+
+[node name="Sprite6" type="Sprite" parent="Sprite3"]
+position = Vector2( 288, -167.811 )
+texture = ExtResource( 15 )
+
+[node name="Sprite7" type="Sprite" parent="Sprite3"]
+position = Vector2( 414.992, -147.401 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="Sprite8" type="Sprite" parent="Sprite3"]
+position = Vector2( 548.775, 160.631 )
+texture = ExtResource( 16 )
+
+[node name="Sprite9" type="Sprite" parent="Sprite3"]
+position = Vector2( 827.601, 122.042 )
+texture = ExtResource( 17 )
+flip_h = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 1019.2
@@ -25,27 +83,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1153.89, 664.497 )
+[node name="Sprite" type="Sprite" parent="TextureRect"]
+position = Vector2( 134.69, 49.388 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-margin_left = 344.771
-margin_top = 212.986
-margin_right = 866.771
-margin_bottom = 310.986
-texture = ExtResource( 5 )
+[node name="startgame" type="TextureRect" parent="."]
+margin_left = 200.0
+margin_top = 300.0
+margin_right = 600.0
+margin_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource( 7 )
 expand = true
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="TextureRect2"]
-margin_left = -1.0
-margin_top = -2.0
-margin_right = 520.0
+[node name="TextureButton" type="TextureButton" parent="startgame"]
+margin_right = 400.0
 margin_bottom = 101.0
 size_flags_horizontal = 2
 texture_pressed = ExtResource( 3 )
@@ -53,3 +111,54 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="howtoplay" type="TextureRect" parent="."]
+margin_left = 200.0
+margin_top = 420.0
+margin_right = 600.0
+margin_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="howtoplay"]
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 399.0
+margin_bottom = 100.0
+size_flags_horizontal = 2
+texture_pressed = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="TextureRect" parent="."]
+margin_left = 200.0
+margin_top = 540.0
+margin_right = 600.0
+margin_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="exit"]
+margin_right = 400.0
+margin_bottom = 101.0
+size_flags_horizontal = 2
+texture_pressed = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="exit/TextureButton" to="." method="_on_Exit_Button"]
