@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://background_4.jpg" type="Texture" id=1]
 [ext_resource path="res://action_generator.gd" type="Script" id=2]
 [ext_resource path="res://selector.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 50.8497, 4.388 )
 
 [node name="action_gen" type="Node2D"]
 script = ExtResource( 2 )
@@ -18,6 +21,18 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="Sprite" parent="."]
+position = Vector2( 86.989, 350 )
 scale = Vector2( 1.2, 1 )
 z_index = 1
 texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="TextureRect"]
+position = Vector2( -44.1169, 8.70261 )
+scale = Vector2( 0.833333, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D"]
+position = Vector2( 14.4115, -10.8502 )
+shape = SubResource( 1 )
+
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2( 15, 720 )

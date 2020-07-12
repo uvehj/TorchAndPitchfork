@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mid-Air_Machine_-_Remember_the_Way_123__44.ogg-15f211f89a68f351638b81881f51c0c3.oggstr"
+
+[deps]
+
+source_file="res://Music/Mid-Air_Machine_-_Remember_the_Way_123__44.ogg"
+dest_files=[ "res://.import/Mid-Air_Machine_-_Remember_the_Way_123__44.ogg-15f211f89a68f351638b81881f51c0c3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

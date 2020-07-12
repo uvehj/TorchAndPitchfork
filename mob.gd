@@ -22,7 +22,14 @@ func _ready():
 	$MobBody.faction=faction
 	self.set_color()
 	rng.randomize()
+	if faction == "neutral":
+		movement_speed = movement_speed / 2
+	if faction == "rebels":
+		movement_speed = movement_speed * 1.5
 	
+func set_swarm(value):
+	$MobBody.swarm=value
+
 func set_color():
 	if faction == "rebels":
 		$MobBody.color=Color(1.0,0.0,0.0)
@@ -68,8 +75,8 @@ func mob_clash(clash_area, delta):
 	if clash_faction == "rebels":
 		if faction == "neutral":
 			size = size - 1 * delta * combat_speed
-		elif faction == "church":
-			if clash_area.get_mob_size() >= size:
+		elif faction == "church" or faction == "church":
+			if clash_area.get_mob_size() > size:
 				size = size - 1 * delta * combat_speed
 			else:
 				size = size + 1 * delta * combat_speed
